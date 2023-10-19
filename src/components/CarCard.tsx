@@ -6,6 +6,7 @@ import { Car } from "@/types/car.interface";
 import CarDetails from "./CarDetail";
 import { useState } from "react";
 import { generateCarImageUrl } from "@/utils/generateCarImageUrl";
+import { colors } from "@/constants";
 
 interface CarCard {
   car: Car
@@ -13,6 +14,13 @@ interface CarCard {
 
 export default function CarCard( { car } : CarCard) {
   const { city_mpg, year, make, model, transmission, drive } = car;
+  
+  const color = `pspc${colors[Math.floor(Math.random() * colors.length)]}`
+
+  const updatedCar = {
+    ...car,
+    color
+  }
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -31,7 +39,7 @@ export default function CarCard( { car } : CarCard) {
       </p>
 
       <div className='relative w-full h-40 my-3 object-contain'>
-        <Image src={generateCarImageUrl(car)} alt='car model' fill priority className='object-contain' />
+        <Image src={generateCarImageUrl(updatedCar)} alt='car model' fill priority className='object-contain' />
       </div>
 
       <div className='relative flex w-full mt-2'>
@@ -63,7 +71,7 @@ export default function CarCard( { car } : CarCard) {
         </div>
       </div>
 
-      <CarDetails isOpen={isOpen} closeModal={() => setIsOpen(false)} car={car} />
+      <CarDetails isOpen={isOpen} closeModal={() => setIsOpen(false)} car={updatedCar} />
     </div>
   )
 }

@@ -42,6 +42,14 @@ export const manufacturers = [
   "Volvo",
 ];
 
+export const colors = [
+  '0004',
+  '0185',
+  '0092',
+  '0323',
+  '0220'
+]
+
 export const yearsOfProduction = [
   { title: "Year", value: "" },
   { title: "2015", value: "2015" },
