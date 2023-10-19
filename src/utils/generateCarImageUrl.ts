@@ -11,6 +11,7 @@ export const generateCarImageUrl = (car: Car, angle?: string) => {
   url.searchParams.append('modelYear', `${year}`);
   // url.searchParams.append('zoomLevel', zoomLevel);
   url.searchParams.append('angle', `${angle}`);
+  url.searchParams.append('paintId', `pspc0092`);
 
   return `${url}`;
 } 
