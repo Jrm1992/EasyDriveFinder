@@ -1,6 +1,8 @@
 'use client'
 import Image from 'next/image';
 import  Button  from './Button' 
+import { Transition } from '@headlessui/react';
+import { Fragment } from 'react';
 
 export default function Hero() {
   const handleScroll = () => {
@@ -28,11 +30,30 @@ export default function Hero() {
         />
       </div>
       <div className="hero__image-container">
-        <div className="hero__image">
-          <Image src="/hero.png" alt="hero" fill className="object-contain" />
-        </div>
+      <Transition
+        appear={true}
+        show
+        as={Fragment}
+        enter="transition-all ease-in-out duration-500 delay-[200ms]"
+        enterFrom="opacity-0 translate-y-6"
+        enterTo="opacity-100 translate-y-0"
+      >
+          <div className="hero__image">
+            <Image src="/hero.png" alt="hero" fill className="object-contain" />
+          </div>
+        </Transition>
 
+        <Transition
+        appear={true}
+        show
+        as={Fragment}
+        enter="transition-all ease-in-out duration-500"
+        enterFrom="opacity-0 translate-x-40"
+        enterTo="opacity-100 translate-x-0"
+      >
         <div className="hero__image-overlay" />
+        </Transition>
+
       </div>
     </div>
   )
