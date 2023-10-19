@@ -58,7 +58,7 @@ export default function Searchbar() {
   };
 
   return (
-    <form className='searchbar' onSubmit={handleSearch}>
+    <form className='searchbar z-10' onSubmit={handleSearch}>
     <div className='searchbar__item'>
       <SearchManufacturer
         manufacturer={manufacturer}

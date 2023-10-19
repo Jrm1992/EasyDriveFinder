@@ -1,3 +1,5 @@
+'use client'
+
 import { useRouter } from "next/navigation";
 import Button from "./Button";
 import { updateSearchParams } from "@/utils/updateSearchParams";
