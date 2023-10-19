@@ -43,11 +43,11 @@
 }
 
 .hero__title {
-  @apply 2xl:text-[72px] sm:text-[64px] text-[50px] font-extrabold;
+  @apply 2xl:text-[72px] sm:text-[64px] text-[40px] font-extrabold;
 }
 
 .hero__subtitle {
-  @apply text-[27px] text-black-100 font-light mt-5;
+  @apply text-[26px] text-black-100 font-light mt-5;
 }
 
 .hero__image-container {
@@ -215,5 +215,9 @@
 
 .search-manufacturer__option {
   @apply cursor-default select-none py-2 pl-10 pr-4;
+}
+
+.blue_gradient {
+  @apply font-black bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent;
 }
 /* END: search manufacturer styles */

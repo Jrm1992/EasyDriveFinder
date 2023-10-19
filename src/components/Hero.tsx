@@ -14,12 +14,11 @@ export default function Hero() {
     <div className="hero">
       <div className="flex-1 pt-36 padding-x">
         <h1 className="hero__title">
-          Find, book, rent a car — quick and super easy!
+          Unlock Your Journey with <span className='blue_gradient'>EasyDriveFinder</span>: Where the Road Awaits Your Story!
         </h1>
 
         <p className="hero__subtitle">
-          Streamline your car rental experience with our effortless booking
-          process.
+          Discover Seamless Rental Car Experiences for Every Adventure
         </p>
 
         <Button
