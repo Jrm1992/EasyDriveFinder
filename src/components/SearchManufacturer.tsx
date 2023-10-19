@@ -60,7 +60,7 @@ export default function SearchManufacturer({ manufacturer, setManufacturer}: Sea
                 value={query}
                 className='search-manufacturer__option'
               >
-                Create '{query}'
+                Create &apos{query}&apos
               </Combobox.Option>
             ) : (
               filteredManufacturers.map((item) => (
