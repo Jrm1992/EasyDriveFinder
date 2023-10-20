@@ -1,12 +1,13 @@
 "use client";
 
-import { Fragment, useState } from "react";
+import { CustomFilter } from "@/types/filter.interface";
+import { updateSearchParams } from "@/utils/updateSearchParams";
+import { Listbox, Transition } from "@headlessui/react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { Listbox, Transition } from "@headlessui/react";
-import { updateSearchParams } from "@/utils/updateSearchParams";
+import { Fragment, useState } from "react";
 
-export default function CustomFilter({ title, options }: any) {
+export default function CustomFilter({ title, options }: CustomFilter) {
   const router = useRouter();
   const [selected, setSelected] = useState(options[0]); // State for storing the selected option
 
