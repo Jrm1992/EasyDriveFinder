@@ -3,8 +3,9 @@
 import { useRouter } from "next/navigation";
 import Button from "./Button";
 import { updateSearchParams } from "@/utils/updateSearchParams";
+import { ShowMore } from "@/types/showMore.interface";
 
-export default function ShowMore({ pageNumber, isNext }: any) {
+export default function ShowMore({ pageNumber, isNext }: ShowMore) {
   const router = useRouter();
 
   const handleNavigation = () => {
