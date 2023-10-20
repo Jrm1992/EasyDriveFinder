@@ -36,7 +36,7 @@ export default function CarCard( { car } : CarCard) {
       </p>
 
       <div className='relative w-full h-40 my-3 object-contain'>
-        <Image src={generateCarImageUrl(updatedCar)} alt='car model' fill priority className='object-contain' />
+        <Image src={generateCarImageUrl(updatedCar)} loading="lazy" alt='car model' fill className='object-contain' />
       </div>
 
       <div className='relative flex w-full mt-2'>
