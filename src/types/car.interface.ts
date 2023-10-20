@@ -13,3 +13,13 @@ export interface Car {
   year: number;
   color?: string;
 }
+
+export interface CarDetails {
+  isOpen: boolean;
+  closeModal: () => void;
+  car: Car;
+}
+
+export interface CarCard {
+  car: Car
+}

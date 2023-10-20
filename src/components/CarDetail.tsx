@@ -3,17 +3,12 @@
 import Image from "next/image";
 import { Fragment } from "react";
 
-import { Car } from "@/types/car.interface";
 import { Dialog, Transition } from "@headlessui/react";
 import { generateCarImageUrl } from "@/utils/generateCarImageUrl";
+import { CarDetails } from "@/types/car.interface";
 
-interface CarDetailsProps {
-  isOpen: boolean;
-  closeModal: () => void;
-  car: Car;
-}
 
-export default function CarDetails ({ isOpen, closeModal, car }: CarDetailsProps){
+export default function CarDetails ({ isOpen, closeModal, car }: CarDetails){
   return (
   <>
     <Transition appear show={isOpen} as={Fragment}>

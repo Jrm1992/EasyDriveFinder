@@ -2,15 +2,12 @@
 
 import Image from "next/image";
 import { Button } from ".";
-import { Car } from "@/types/car.interface";
+import { Car, CarCard } from "@/types/car.interface";
 import CarDetails from "./CarDetail";
 import { useState } from "react";
 import { generateCarImageUrl } from "@/utils/generateCarImageUrl";
 import { colors } from "@/constants";
 
-interface CarCard {
-  car: Car
-}
 
 export default function CarCard( { car } : CarCard) {
   const { city_mpg, year, make, model, transmission, drive } = car;
