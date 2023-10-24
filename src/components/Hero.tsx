@@ -14,6 +14,14 @@ export default function Hero() {
   };
   return (
     <div className="hero">
+            <Transition
+        appear={true}
+        show
+        as={Fragment}
+        enter="transition-all ease-in-out duration-500 delay-[300ms]"
+        enterFrom="opacity-0 -translate-x-6"
+        enterTo="opacity-100 translate-x-0"
+      >
       <div className="flex-1 pt-36 padding-x">
         <h1 className="hero__title">
           Unlock Your Journey with <span className='blue_gradient'>EasyDriveFinder</span>: Where the Road Awaits Your Story!
@@ -29,12 +37,13 @@ export default function Hero() {
           handleClick={handleScroll}
         />
       </div>
+      </Transition>
       <div className="hero__image-container">
       <Transition
         appear={true}
         show
         as={Fragment}
-        enter="transition-all ease-in-out duration-500 delay-[200ms]"
+        enter="transition-all ease-in-out duration-500 delay-[300ms]"
         enterFrom="opacity-0 translate-y-6"
         enterTo="opacity-100 translate-y-0"
       >
